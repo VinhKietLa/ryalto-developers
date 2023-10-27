@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo img {
+  width: 100px; /* Adjust according to your logo's size */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 0 15px; /* Space between items */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.search-icon img {
+  width: 20px; /* Adjust according to your search icon's size */
+}
