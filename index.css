@@ -8,7 +8,7 @@ body {
   font-family: "Source Sans 3", sans-serif;
 }
 
-/* NAVBAR STYLES */
+/* ____NAVBAR STYLES____ */
 
 nav {
   background-color: #333;
@@ -123,7 +123,7 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh; /* Makes the hero section take up the full viewport height */
+  height: 60vh; /* Makes the hero section take up the full viewport height */
   background-color: #000;
   text-align: center;
 }
@@ -157,10 +157,12 @@ nav a:hover {
 .btn:hover {
   background-color: #0099ff;
 }
+
 /* ___BLOG POST SECTION STYLES___ */
 
 #blog-section {
   background-color: #333;
+  padding-bottom: 100px;
 }
 
 .blog-section-title {
@@ -204,4 +206,65 @@ nav a:hover {
   width: 40px;
   height: 40px;
   border-radius: 50%; /* Circle avatar */
+}
+
+/* ___Footer SECTION STYLES___ */
+footer {
+  background-color: #0099ff; /* Color matching the image */
+  padding: 20px 0;
+  color: white;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  max-width: 1200px; /* Set this to your preferred width */
+  /* margin: 0 auto; To center the content */
+  padding: 0 20px;
+}
+
+.logo-section,
+.social-section,
+.company-section {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+.company-section {
+  margin-right: 0; /* Ensure the last section doesn't have extra margin */
+}
+
+.logo-section img {
+  max-width: 100px; /* Set this to your preferred width */
+  margin-right: 20px;
+}
+
+.logo-section span {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.social-section span,
+.company-section span {
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.social-section a,
+.company-section a {
+  margin-right: 13px;
+}
+
+/* .social-section a:last-child,
+.company-section a:last-child {
+  margin-right: 0;
+} */
+
+a img {
+  max-width: 25px; /* Adjust based on your icon sizes */
 }
