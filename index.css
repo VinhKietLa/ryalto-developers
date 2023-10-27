@@ -8,6 +8,8 @@ body {
   font-family: "Source Sans 3", sans-serif;
 }
 
+/* NAVBAR STYLES */
+
 nav {
   background-color: #333;
   display: flex;
@@ -68,8 +70,8 @@ nav a:hover {
 .toggle-container {
   display: inline-block;
   position: relative;
-  width: 55px; /* Width of the toggle */
-  height: 30px; /* Height of the toggle */
+  width: 45px; /* Width of the toggle */
+  height: 20px; /* Height of the toggle */
   cursor: pointer;
   margin-left: 10px;
 }
@@ -86,9 +88,10 @@ nav a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #ccc; /* Color when the toggle is off */
+  background-color: #39393a; /* Color when the toggle is off */
   border-radius: 30px; /* Creates Round corners */
   transition: background-color 0.2s; /* Transition effect for smooth color change */
+  border: solid white;
 }
 
 /* Style the circle inside the toggle */
@@ -96,11 +99,11 @@ nav a:hover {
   content: "";
   position: absolute;
   top: 50%;
-  left: 5%; /* Initial position */
+  left: 1%; /* Initial position */
   transform: translateY(-50%);
-  width: 24px; /* Diameter of the circle */
-  height: 24px;
-  background-color: #fff; /* Circle color */
+  width: 20px; /* Diameter of the circle */
+  height: 18px;
+  background-color: #b4b4b4; /* Circle color */
   border-radius: 50%; /* Creates a round shape */
   transition: left 0.2s; /* Transition effect for smooth movement */
 }
@@ -111,5 +114,46 @@ nav a:hover {
 }
 
 .toggle-input:checked + .toggle::before {
-  left: 50%; /* Moves to the other end when checked */
+  left: 54%; /* Moves to the other end when checked */
+}
+
+/* HERO SECTION STYLES */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Makes the hero section take up the full viewport height */
+  background-color: #000;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: white;
+}
+.hero-title-blue {
+  color: #0099ff;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffcc00;
+  color: #000;
+  border-radius: 5%;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #0099ff;
 }
