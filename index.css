@@ -171,18 +171,19 @@ nav a:hover {
 }
 .latest-posts {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+  grid-template-columns: repeat(2, 400px); /* Two columns layout */
   gap: 20px; /* Space between grid items */
   padding: 0 50px; /* Space around the grid */
-  background-color: #333; /* Light background for contrast */
+  background-color: #333; /* Dark background for contrast matching navbar */
   margin: 0 100px;
+  justify-content: center;
 }
 
 .post-item {
   border: 1px solid #e0e0e0;
   padding: 10px;
   border-radius: 5px;
-  background-color: #ffcc00; /* White background for each post item */
+  background-color: #ffcc00; /* Yelow background for each post item */
 }
 
 .post-item img {
