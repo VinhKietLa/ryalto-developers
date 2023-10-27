@@ -1,5 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Source Sans 3", sans-serif;
 }
 
 nav {
@@ -7,22 +13,34 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 25px 20px;
+}
+
+.nav-links-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
-  width: 100px; /* Adjust according to your logo's size */
+  width: 100px;
+  margin-bottom: 5px;
 }
 
 nav ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
   display: flex;
+  justify-content: flex-end;
 }
 
 nav li {
-  margin: 0 15px; /* Space between items */
+  margin: 0 20px; /* Space between items */
 }
 
 nav a {
@@ -35,6 +53,63 @@ nav a:hover {
   text-decoration: underline;
 }
 
+.nav-title {
+  color: white;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
 .search-icon img {
-  width: 20px; /* Adjust according to your search icon's size */
+  width: 25px; /* Adjust search icon's size */
+  display: flex;
+}
+
+/* General styling for the toggle container */
+.toggle-container {
+  display: inline-block;
+  position: relative;
+  width: 55px; /* Width of the toggle */
+  height: 30px; /* Height of the toggle */
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Hides the checkbox input */
+.toggle-input {
+  display: none;
+}
+
+/* Style the toggle switch (div) */
+.toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc; /* Color when the toggle is off */
+  border-radius: 30px; /* Creates Round corners */
+  transition: background-color 0.2s; /* Transition effect for smooth color change */
+}
+
+/* Style the circle inside the toggle */
+.toggle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5%; /* Initial position */
+  transform: translateY(-50%);
+  width: 24px; /* Diameter of the circle */
+  height: 24px;
+  background-color: #fff; /* Circle color */
+  border-radius: 50%; /* Creates a round shape */
+  transition: left 0.2s; /* Transition effect for smooth movement */
+}
+
+/* Styling when the toggle is checked */
+.toggle-input:checked + .toggle {
+  background-color: #ffc306; /* Color when the toggle is on */
+}
+
+.toggle-input:checked + .toggle::before {
+  left: 50%; /* Moves to the other end when checked */
 }

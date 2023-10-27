@@ -7,21 +7,33 @@
     <title>Ryalto Developers</title>
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/png" size="32x32" href="/assets/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <nav>
         <div class="logo">
             <img src="/assets/ryalto-logo-lg.png" alt="Ryalto logo">
+            <span class="nav-title">Developers</span>
+
+            <label class="toggle-container">
+                <input type="checkbox" class="toggle-input">
+                <div class="toggle"></div>
+            </label>
+
+
         </div>
-        <ul>
-            <li><a href="#">Developers</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Our team</a></li>
-            <li><a href="#">Careers</a></li>
-        </ul>
-        <div class="search-icon">
-            <img src="/assets/Search icon.png" alt="Search">
+        <div class="nav-links-container">
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Our team</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+            <div class="search-icon">
+                <img src="/assets/Search icon.png" alt="Search">
+            </div>
         </div>
     </nav>
 </body>
