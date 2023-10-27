@@ -117,7 +117,7 @@ nav a:hover {
   left: 54%; /* Moves to the other end when checked */
 }
 
-/* HERO SECTION STYLES */
+/* ___HERO SECTION STYLES___ */
 .hero {
   display: flex;
   flex-direction: column;
@@ -156,4 +156,49 @@ nav a:hover {
 
 .btn:hover {
   background-color: #0099ff;
+}
+/* ___BLOG POST SECTION STYLES___ */
+
+.blog-section {
+  background-color: #000;
+}
+
+.blog-section-title {
+  color: white;
+  background-color: #000;
+  text-align: center;
+}
+.latest-posts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+  gap: 20px; /* Space between grid items */
+  padding: 20px; /* Space around the grid */
+  background-color: #050404; /* Light background for contrast */
+}
+
+.post-item {
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ffffff; /* White background for each post item */
+}
+
+.post-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: solid black 1px;
+  object-fit: cover;
+}
+
+.post-author {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between author's details */
+}
+
+.post-author img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Circle avatar */
 }
