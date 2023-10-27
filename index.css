@@ -54,6 +54,7 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
+  color: #ffbd00;
 }
 
 .nav-title {
@@ -65,6 +66,11 @@ nav a:hover {
 .search-icon img {
   width: 25px; /* Adjust search icon's size */
   display: flex;
+  height: auto;
+}
+
+.search-icon:hover img {
+  content: url("/assets/search-icon-hover.png");
 }
 
 /* General styling for the toggle container */
@@ -111,7 +117,7 @@ nav a:hover {
 
 /* Styling when the toggle is checked */
 .toggle-input:checked + .toggle {
-  background-color: #ffc306; /* Color when the toggle is on */
+  background-color: #ffbd00; /* Color when the toggle is on */
 }
 
 .toggle-input:checked + .toggle::before {
@@ -124,9 +130,8 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50vh; /* Makes the hero section take up the full viewport height */
+  height: 50vh; /* Makes the hero section take up the half viewport height */
   background-color: #000;
-
   text-align: center;
 }
 
@@ -158,6 +163,9 @@ nav a:hover {
 
 .btn:hover {
   background-color: #0099ff;
+  text-decoration: underline;
+  text-decoration-color: #ffbd00;
+  color: #ffbd00;
 }
 
 hr {
@@ -185,32 +193,20 @@ hr {
   display: grid;
   grid-template-columns: repeat(2, 400px); /* Two columns layout */
   gap: 20px; /* Space between grid items */
-  /* padding: 0 50px; Space around the grid */
-  background-color: #333; /* Dark background for contrast matching navbar */
-  /* margin: 0 100px; */
   justify-content: center;
   background-color: black;
 }
 
 .post-item {
-  border: 1px solid #e0e0e0;
-  padding: 10px;
+  border: 5px solid #e0e0e0;
+  padding: 20px;
   border-radius: 5px;
-  background-color: #ffcc00; /* Yelow background for each post item */
+  background-color: #ffbd00; /* Yelow background for each post item */
 }
 
 .post-item img {
   width: 100%;
-  height: auto;
-  border-radius: 5px;
-  border: solid black 1px;
-  object-fit: cover;
-}
-
-.post-author {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Space between author's details */
+  /* height: auto; */
 }
 
 .post-author img {
@@ -222,7 +218,7 @@ hr {
 
 /* ___Footer SECTION STYLES___ */
 footer {
-  background-color: #0099ff; /* Color matching the image */
+  background-color: #0099ff;
   padding: 20px 0;
   color: white;
   height: 150px;
@@ -233,10 +229,7 @@ footer {
 
 .footer-content {
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
-  max-width: 1200px; /* Set this to your preferred width */
-  /* margin: 0 auto; To center the content */
+  max-width: 1200px;
   padding: 0 20px;
 }
 
@@ -248,35 +241,41 @@ footer {
   margin-right: 50px;
 }
 .company-section {
-  margin-right: 0; /* Ensure the last section doesn't have extra margin */
+  margin-right: 0;
 }
 
 .logo-section img {
-  max-width: 100px; /* Set this to your preferred width */
+  max-width: 100px;
   margin-right: 20px;
-}
-
-.logo-section span {
-  color: #ffcc00;
-  font-weight: bold;
 }
 
 .social-section span,
 .company-section span {
-  margin-right: 20px;
+  margin-right: 10px;
   font-weight: bold;
 }
 
 .social-section a,
 .company-section a {
-  margin-right: 13px;
+  margin-right: 10px;
 }
 
-/* .social-section a:last-child,
-.company-section a:last-child {
-  margin-right: 0;
-} */
-
 a img {
-  max-width: 25px; /* Adjust based on your icon sizes */
+  max-width: 25px;
+}
+
+.github-icon:hover {
+  content: url("/assets/footer-images/footer-hover/github-hover.png");
+}
+
+.twitter-icon:hover {
+  content: url("/assets/footer-images/footer-hover/twitter-hover.png");
+}
+
+.linkedin-icon:hover {
+  content: url("/assets/footer-images/footer-hover/linkedin-hover.png");
+}
+
+.external-link-icon:hover {
+  content: url("/assets/footer-images/footer-hover/external-link-hover.png");
 }
