@@ -21,11 +21,13 @@ nav {
 .nav-links-container {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .logo img {
@@ -285,6 +287,7 @@ footer {
   nav {
     flex-direction: column;
     height: 20px;
+    text-align: center;
   }
 
   .nav-links-container {
@@ -330,6 +333,7 @@ footer {
   .logo-section img {
     max-width: 100px;
     margin-right: 0;
+    margin-bottom: 0.5rem;
   }
 
   .logo-section,
