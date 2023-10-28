@@ -293,7 +293,6 @@ footer {
     margin-bottom: 1;
   }
 
-  /*Blog post Section*/
   #blog-section {
     padding-bottom: 50px;
   }
@@ -302,7 +301,6 @@ footer {
     grid-template-columns: repeat(1, 90%);
   }
 
-  /*Footer Section*/
   footer {
     height: auto;
   }
@@ -331,10 +329,6 @@ footer {
 
 /* Specific styles for viewports 481px to 600px */
 @media screen and (min-width: 481px) and (max-width: 600px) {
-  nav {
-    flex-direction: column;
-  }
-  /*Hero Section*/
   .hero {
     height: 28vh;
   }
@@ -350,39 +344,25 @@ footer {
 
 /* Specific styles for viewports under 480px */
 @media screen and (max-width: 480px) {
-  /*Navbar*/
-  nav {
-    flex-direction: column;
-  }
-  nav li {
-    margin-right: 17px;
-  }
-
   .nav-links-container {
     margin-top: 1rem;
     flex-wrap: wrap;
   }
-  /*Hero Section*/
-  .hero {
-    height: 30vh;
-  }
+}
 
-  .logo-section,
-  .social-section {
-    display: flex;
-    align-items: center;
-    margin-right: 0;
+/* Consolidated styles for nav in both 481px to 600px and under 480px */
+@media screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
   }
 }
 
-/* Specific styles for viewports under 1000px*/
+/* Consolidated styles for viewports under 1000px */
 @media screen and (max-width: 1000px) {
-  /*Navbar*/
-
   nav li {
-    margin-right: 17px;
+    margin: 0 16px;
   }
-  /*Hero Section*/
+
   .hero {
     height: 30vh;
   }
@@ -398,6 +378,13 @@ footer {
   .footer-content {
     display: flex;
     align-items: center;
-    padding: 0 0;
+    padding: 0;
+  }
+
+  .logo-section,
+  .social-section {
+    display: flex;
+    align-items: center;
+    margin-right: 0;
   }
 }
