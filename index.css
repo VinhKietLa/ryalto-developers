@@ -73,61 +73,35 @@ nav a:hover {
   content: url("/assets/search-icon-hover.png");
 }
 
-.toggle-container {
-  display: flex;
-  position: relative;
-  width: 45px; /* Width of the toggle */
-  height: 23px; /* Adjusted height for the toggle */
-  cursor: pointer;
-  margin-left: 10px;
+/* Keeps the checkbox hidden */
+#theme-switcher {
+  display: none;
+}
+#theme-switcher:checked + .label .sun {
+  display: block;
 }
 
-.toggle-input {
+#theme-switcher:checked + .label .moon {
   display: none;
 }
 
-.toggle {
+.label {
+  border-radius: 50%;
+  cursor: pointer;
   display: flex;
   align-items: center;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-  transition: background-color 0.2s;
-  border: 1px solid #6a6a6a;
-  background-color: #ffbd00;
-  overflow: hidden;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
 }
 
-.icon-sun,
-.icon-moon {
-  width: 20px;
-  height: 20px;
-  transition: transform 0.2s;
+.label img {
+  width: 25px;
+  height: 25px;
 }
 
-.icon-sun {
-  transform: translateX(0);
-  background-image: url("assets/sun.png");
-  background-size: cover;
-}
-
-.icon-moon {
-  transform: translateX(150%);
-  background-image: url("assets/moon.png");
-  background-size: cover;
-}
-
-.toggle-input:checked + .toggle .icon-sun {
-  transform: translateX(-100%);
-}
-
-.toggle-input:checked + .toggle .icon-moon {
-  transform: translateX(0);
-}
-
-.toggle-input:checked + .toggle {
-  background-color: #979797; /* This is the bg color when the moon is visible */
+.label .sun {
+  display: none;
 }
 
 /* ___HERO SECTION STYLES___ */
