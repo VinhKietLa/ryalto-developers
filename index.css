@@ -279,3 +279,51 @@ a img {
 .external-link-icon:hover {
   content: url("/assets/footer-images/footer-hover/external-link-hover.png");
 }
+
+/* ___RESPONSIVE STYLES___ */
+
+@media (max-width: 480px) {
+  body {
+    font-size: 90%;
+  }
+
+  /*Navbar*/
+  nav {
+    flex-direction: column;
+    height: 20px;
+  }
+
+  .nav-links-container {
+    margin-top: 1rem;
+  }
+
+  /*Hero Section*/
+  .hero {
+    height: 35vh;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 0.8rem;
+  }
+
+  /*Blog post Section*/
+
+  .latest-posts {
+    grid-template-columns: repeat(1, 60%);
+  }
+
+  /*Footer Section*/
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo-section,
+  .social-section,
+  .company-section {
+    margin-right: 0;
+    margin-top: 0.7em;
+  }
+}
