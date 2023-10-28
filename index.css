@@ -60,7 +60,6 @@ nav a:hover {
 .nav-title {
   color: white;
   margin-left: 10px;
-  font-size: 20px;
 }
 
 .search-icon img {
@@ -157,18 +156,18 @@ nav a:hover {
   color: white;
 }
 
-.btn {
+.hero-btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #ffbd00;
   color: white;
+  background-color: #ffbd00;
   border-radius: 5%;
   text-decoration: none;
   transition: background-color 0.3s;
   font-weight: bold;
 }
 
-.btn:hover {
+.hero-btn:hover {
   background-color: white;
   text-decoration: underline;
   text-decoration-color: #ffbd00;
@@ -213,7 +212,6 @@ hr {
   column-gap: 20px;
   text-decoration: none;
   color: inherit;
-  height: 250px;
   padding: 20px;
   border-radius: 5px;
   background-color: white;
@@ -230,14 +228,14 @@ hr {
   width: 100%;
   height: 100%;
   grid-row: 1 / span 3; /* Spans across 3 grid rows: title, content, and author */
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .post-author img {
   width: 40px;
   height: 40px;
   border-radius: 50%; /* Circle avatar */
-  background-color: rgb(68, 68, 68);
+  background-color: #ffbd00;
 }
 
 /* ___Footer SECTION STYLES___ */
