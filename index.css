@@ -16,6 +16,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 25px 20px;
+  text-align: center;
 }
 
 .nav-links-container {
@@ -119,6 +120,7 @@ nav a:hover {
   font-size: 4rem;
   margin-bottom: 20px;
   color: white;
+  text-align: center;
 }
 .hero-title-blue {
   color: #ffbd00;
@@ -128,6 +130,7 @@ nav a:hover {
   font-size: 1.5rem;
   margin-bottom: 2.5rem;
   color: white;
+  text-align: center;
 }
 
 .hero-btn {
@@ -225,6 +228,7 @@ footer {
 
 .footer-content {
   display: flex;
+  align-items: center;
   padding: 0 20px;
 }
 
@@ -278,26 +282,8 @@ footer {
 
 /* ___RESPONSIVE STYLES___ */
 
-@media (max-width: 480px) {
-  body {
-    font-size: 90%;
-  }
-
-  /*Navbar*/
-  nav {
-    flex-direction: column;
-    height: 20px;
-    text-align: center;
-  }
-
-  .nav-links-container {
-    margin-top: 1rem;
-  }
-
-  /*Hero Section*/
-  .hero {
-    height: 45vh;
-  }
+/* Shared styles for both viewports */
+@media screen and (max-width: 600px) {
   .hero h1 {
     font-size: 2.5rem;
   }
@@ -317,19 +303,18 @@ footer {
   }
 
   /*Footer Section*/
-
   footer {
     height: auto;
   }
 
   .footer-content {
     flex-direction: column;
-    align-items: center;
   }
 
   .social-section {
     margin-top: 12rem;
   }
+
   .logo-section img {
     max-width: 100px;
     margin-right: 0;
@@ -341,5 +326,78 @@ footer {
   .company-section {
     margin-right: 0;
     margin-top: 0.8em;
+  }
+}
+
+/* Specific styles for viewports 481px to 600px */
+@media screen and (min-width: 481px) and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+  /*Hero Section*/
+  .hero {
+    height: 28vh;
+  }
+
+  .nav-links-container {
+    margin-top: 2rem;
+  }
+
+  .post-item {
+    grid-template-columns: 4fr 1fr;
+  }
+}
+
+/* Specific styles for viewports under 480px */
+@media screen and (max-width: 480px) {
+  /*Navbar*/
+  nav {
+    flex-direction: column;
+  }
+  nav li {
+    margin-right: 17px;
+  }
+
+  .nav-links-container {
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  /*Hero Section*/
+  .hero {
+    height: 30vh;
+  }
+
+  .logo-section,
+  .social-section {
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+  }
+}
+
+/* Specific styles for viewports under 1000px*/
+@media screen and (max-width: 1000px) {
+  /*Navbar*/
+
+  nav li {
+    margin-right: 17px;
+  }
+  /*Hero Section*/
+  .hero {
+    height: 30vh;
+  }
+
+  .latest-posts {
+    grid-template-columns: repeat(1, 80%);
+  }
+
+  .post-item {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .footer-content {
+    display: flex;
+    align-items: center;
+    padding: 0 0;
   }
 }
