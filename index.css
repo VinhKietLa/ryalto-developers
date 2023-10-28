@@ -146,7 +146,7 @@ nav a:hover {
 
 .hero p {
   font-size: 1.5rem;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   color: white;
 }
 
@@ -299,7 +299,7 @@ a img {
 
   /*Hero Section*/
   .hero {
-    height: 35vh;
+    height: 45vh;
   }
   .hero h1 {
     font-size: 2.5rem;
@@ -307,23 +307,37 @@ a img {
 
   .hero p {
     font-size: 0.8rem;
+    margin-bottom: 1;
   }
 
   /*Blog post Section*/
+  #blog-section {
+    padding-bottom: 50px;
+  }
 
   .latest-posts {
-    grid-template-columns: repeat(1, 60%);
+    grid-template-columns: repeat(1, 90%);
   }
 
   /*Footer Section*/
+
+  footer {
+    height: auto;
+  }
+
   .footer-content {
     flex-direction: column;
     align-items: center;
   }
+
+  .social-section {
+    margin-top: 12rem;
+  }
+
   .logo-section,
   .social-section,
   .company-section {
     margin-right: 0;
-    margin-top: 0.7em;
+    margin-top: 0.8em;
   }
 }
