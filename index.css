@@ -74,60 +74,61 @@ nav a:hover {
   content: url("/assets/search-icon-hover.png");
 }
 
-/* General styling for the toggle container */
 .toggle-container {
   display: flex;
   position: relative;
   width: 45px; /* Width of the toggle */
-  height: 20px; /* Height of the toggle */
+  height: 23px; /* Adjusted height for the toggle */
   cursor: pointer;
   margin-left: 10px;
 }
 
-/* Hides the checkbox input */
 .toggle-input {
   display: none;
 }
 
-/* Style the toggle switch (div) */
 .toggle {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 30px; /* Creates Round corners */
-  transition: background-color 0.2s; /* Transition effect for smooth color change */
-  border: solid 1px #6a6a6a;
-  background-color: #ffbd00; /* Color when the toggle is off */
+  border-radius: 15px;
+  transition: background-color 0.2s;
+  border: 1px solid #6a6a6a;
+  background-color: #ffbd00;
+  overflow: hidden;
 }
 
-/* Style the circle inside the toggle */
-.toggle::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 2%; /* Initial position */
-  transform: translateY(-50%);
-  width: 20px; /* Diameter of the circle */
-  height: 18px;
-  background-color: #ffffff; /* Circle color */
-  border-radius: 50%; /* Creates a round shape */
-  transition: left 0.2s; /* Transition effect for smooth movement */
+.icon-sun,
+.icon-moon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s;
+}
+
+.icon-sun {
+  transform: translateX(0);
   background-image: url("assets/sun.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-size: cover;
 }
 
-/* Styling when the toggle is checked */
-.toggle-input:checked + .toggle {
-  background-color: #6a6a6a; /* Color when the toggle is on */
-}
-
-.toggle-input:checked + .toggle::before {
-  left: 55%; /* Moves to the other end when checked */
+.icon-moon {
+  transform: translateX(150%);
   background-image: url("assets/moon.png");
+  background-size: cover;
+}
+
+.toggle-input:checked + .toggle .icon-sun {
+  transform: translateX(-100%);
+}
+
+.toggle-input:checked + .toggle .icon-moon {
+  transform: translateX(0);
+}
+
+.toggle-input:checked + .toggle {
+  background-color: #979797; /* This is the bg color when the moon is visible */
 }
 
 /* ___HERO SECTION STYLES___ */
@@ -136,7 +137,7 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 40vh; /* Makes the hero section take up the 40% viewport height */
+  height: 50vh; /* Makes the hero section take up the 40% viewport height */
   background-color: #2f98e8;
   text-align: center;
 }
@@ -190,7 +191,6 @@ hr {
 }
 
 .blog-section-title {
-  color: white;
   text-align: center;
   padding: 30px;
   font-weight: bold;
@@ -199,8 +199,8 @@ hr {
   display: grid;
   grid-template-columns: repeat(
     2,
-    minmax(500px, 400px)
-  ); /* Two columns, each between 500px and 400px wide */
+    minmax(400px, 500px)
+  ); /* Two columns, each between 600px and 400px wide */
 
   gap: 20px; /* Space between grid items */
   justify-content: center;
@@ -210,11 +210,19 @@ hr {
 .post-item {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 20px;
+  column-gap: 20px;
+  text-decoration: none;
+  color: inherit;
+  height: 250px;
   padding: 20px;
   border-radius: 5px;
   background-color: white;
-  box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.post-item:hover {
+  transform: scale(1.02); /* Slightly enlarges the item */
+  transition: transform 0.3s ease; /* Smoothens the scaling effect */
 }
 
 .post-item > img {
@@ -222,6 +230,7 @@ hr {
   width: 100%;
   height: 100%;
   grid-row: 1 / span 3; /* Spans across 3 grid rows: title, content, and author */
+  object-fit: cover;
 }
 
 .post-author img {
@@ -275,7 +284,8 @@ footer {
   margin-right: 10px;
 }
 
-a img {
+.social-section img,
+.company-section img {
   max-width: 25px;
 }
 
