@@ -12,7 +12,7 @@ body {
 /* ____NAVBAR STYLES____ */
 
 nav {
-  background-color: black;
+  background-color: #0099ff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -130,8 +130,8 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50vh; /* Makes the hero section take up the half viewport height */
-  background-color: #000;
+  height: 40vh; /* Makes the hero section take up the 40% viewport height */
+  background-color: #0099ff;
   text-align: center;
 }
 
@@ -141,7 +141,7 @@ nav a:hover {
   color: white;
 }
 .hero-title-blue {
-  color: #0099ff;
+  color: #ffbd00;
 }
 
 .hero p {
@@ -153,7 +153,7 @@ nav a:hover {
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #0099ff;
+  background-color: #ffbd00;
   color: white;
   border-radius: 5%;
   text-decoration: none;
@@ -162,7 +162,7 @@ nav a:hover {
 }
 
 .btn:hover {
-  background-color: #0099ff;
+  background-color: white;
   text-decoration: underline;
   text-decoration-color: #ffbd00;
   color: #ffbd00;
@@ -179,7 +179,7 @@ hr {
 /* ___BLOG POST SECTION STYLES___ */
 
 #blog-section {
-  background-color: black;
+  background-color: white;
   padding-bottom: 100px;
 }
 
@@ -191,23 +191,31 @@ hr {
 }
 .latest-posts {
   display: grid;
-  grid-template-columns: repeat(2, 400px); /* Two columns layout */
+  grid-template-columns: repeat(
+    2,
+    minmax(500px, 400px)
+  ); /* Two columns, each between 500px and 400px wide */
+
   gap: 20px; /* Space between grid items */
   justify-content: center;
-  background-color: black;
+  background-color: white;
 }
 
 .post-item {
-  /* border: 5px solid #e0e0e0; */
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
   padding: 20px;
   border-radius: 5px;
-  background-color: black; /* Yelow background for each post item */
-  color: white;
+  background-color: white;
+  box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.1);
 }
 
-.post-item img {
+.post-item > img {
+  grid-column: 2; /* Positions the image in the second column */
   width: 100%;
-  /* height: auto; */
+  height: 100%;
+  grid-row: 1 / span 3; /* Spans across 3 grid rows: title, content, and author */
 }
 
 .post-author img {
