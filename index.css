@@ -333,6 +333,10 @@ a img {
   .social-section {
     margin-top: 12rem;
   }
+  .logo-section img {
+    max-width: 100px;
+    margin-right: 0;
+  }
 
   .logo-section,
   .social-section,
