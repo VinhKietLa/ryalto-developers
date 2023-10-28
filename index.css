@@ -12,7 +12,7 @@ body {
 /* ____NAVBAR STYLES____ */
 
 nav {
-  background-color: #0099ff;
+  background-color: #2f98e8;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -67,6 +67,7 @@ nav a:hover {
   width: 25px; /* Adjust search icon's size */
   display: flex;
   height: auto;
+  margin-left: 1rem;
 }
 
 .search-icon:hover img {
@@ -75,7 +76,7 @@ nav a:hover {
 
 /* General styling for the toggle container */
 .toggle-container {
-  display: inline-block;
+  display: flex;
   position: relative;
   width: 45px; /* Width of the toggle */
   height: 20px; /* Height of the toggle */
@@ -95,10 +96,10 @@ nav a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #39393a; /* Color when the toggle is off */
   border-radius: 30px; /* Creates Round corners */
   transition: background-color 0.2s; /* Transition effect for smooth color change */
-  border: solid white;
+  border: solid 1px #6a6a6a;
+  background-color: #ffbd00; /* Color when the toggle is off */
 }
 
 /* Style the circle inside the toggle */
@@ -106,22 +107,27 @@ nav a:hover {
   content: "";
   position: absolute;
   top: 50%;
-  left: 1%; /* Initial position */
+  left: 2%; /* Initial position */
   transform: translateY(-50%);
   width: 20px; /* Diameter of the circle */
   height: 18px;
-  background-color: #b4b4b4; /* Circle color */
+  background-color: #ffffff; /* Circle color */
   border-radius: 50%; /* Creates a round shape */
   transition: left 0.2s; /* Transition effect for smooth movement */
+  background-image: url("assets/sun.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Styling when the toggle is checked */
 .toggle-input:checked + .toggle {
-  background-color: #ffbd00; /* Color when the toggle is on */
+  background-color: #6a6a6a; /* Color when the toggle is on */
 }
 
 .toggle-input:checked + .toggle::before {
-  left: 54%; /* Moves to the other end when checked */
+  left: 55%; /* Moves to the other end when checked */
+  background-image: url("assets/moon.png");
 }
 
 /* ___HERO SECTION STYLES___ */
@@ -131,7 +137,7 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   height: 40vh; /* Makes the hero section take up the 40% viewport height */
-  background-color: #0099ff;
+  background-color: #2f98e8;
   text-align: center;
 }
 
