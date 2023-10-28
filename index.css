@@ -198,10 +198,11 @@ hr {
 }
 
 .post-item {
-  border: 5px solid #e0e0e0;
+  /* border: 5px solid #e0e0e0; */
   padding: 20px;
   border-radius: 5px;
-  background-color: #ffbd00; /* Yelow background for each post item */
+  background-color: black; /* Yelow background for each post item */
+  color: white;
 }
 
 .post-item img {
