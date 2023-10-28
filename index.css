@@ -15,7 +15,6 @@ nav {
   background-color: #2f98e8;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 25px 20px;
 }
 
@@ -70,7 +69,7 @@ nav a:hover {
 }
 
 .search-icon:hover img {
-  content: url("/assets/search-icon-hover.png");
+  content: url("/assets/navbar/search-icon-hover.png");
 }
 
 /* Keeps the checkbox hidden */
@@ -110,9 +109,8 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50vh; /* Makes the hero section take up the 40% viewport height */
+  height: 50vh; /* Makes the hero section take up the 50% viewport height */
   background-color: #2f98e8;
-  text-align: center;
 }
 
 .hero h1 {
@@ -225,7 +223,6 @@ footer {
 
 .footer-content {
   display: flex;
-  max-width: 1200px;
   padding: 0 20px;
 }
 
@@ -241,7 +238,7 @@ footer {
 }
 
 .logo-section img {
-  max-width: 100px;
+  max-width: 130px;
   margin-right: 20px;
 }
 
