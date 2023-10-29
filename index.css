@@ -1,3 +1,5 @@
+/* Global STYLES____ */
+
 * {
   margin: 0;
   padding: 0;
@@ -38,14 +40,12 @@ nav {
 
 nav ul {
   list-style-type: none;
-  /* margin: 0;
-  padding: 0; */
   display: flex;
   justify-content: flex-end;
 }
 
 nav li {
-  margin: 0 20px; /* Space between items */
+  margin: 0 20px;
 }
 
 nav a {
@@ -65,7 +65,7 @@ nav a:hover {
 }
 
 .search-icon img {
-  width: 25px; /* Adjust search icon's size */
+  width: 25px;
   display: flex;
   height: auto;
   margin-left: 1rem;
@@ -75,7 +75,6 @@ nav a:hover {
   content: url("/assets/navbar/search-icon-hover.png");
 }
 
-/* Keeps the checkbox hidden */
 #theme-switcher {
   display: none;
 }
@@ -112,7 +111,7 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50vh; /* Makes the hero section take up the 50% viewport height */
+  height: 50vh;
   background-color: #2f98e8;
 }
 
@@ -152,10 +151,10 @@ nav a:hover {
 }
 
 hr {
-  border: none; /* Removes default border */
-  height: 1px; /* Sets the height of the divider */
+  border: none;
+  height: 1px;
   width: 50%;
-  background-color: #0099ff; /* Color of the divider */
+  background-color: #0099ff;
   margin: 0 auto;
 }
 
@@ -173,22 +172,21 @@ hr {
 }
 .latest-posts {
   display: grid;
-  grid-template-columns: repeat(
-    2,
-    minmax(400px, 500px)
-  ); /* Two columns, each between 600px and 400px wide */
-
-  gap: 20px; /* Space between grid items */
+  grid-template-columns: repeat(2, minmax(400px, 500px));
+  gap: 20px;
   justify-content: center;
   background-color: white;
+}
+
+.latest-posts a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .post-item {
   display: grid;
   grid-template-columns: 2fr 1fr;
   column-gap: 20px;
-  text-decoration: none;
-  color: inherit;
   padding: 20px;
   border-radius: 5px;
   background-color: white;
@@ -196,22 +194,30 @@ hr {
 }
 
 .post-item:hover {
-  transform: scale(1.02); /* Slightly enlarges the item */
-  transition: transform 0.3s ease; /* Smoothens the scaling effect */
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
 }
 
-.post-item > img {
-  grid-column: 2; /* Positions the image in the second column */
+figcaption h2 {
+  margin-bottom: 1.5rem;
+}
+
+.post-image {
+  grid-column: 2;
   width: 100%;
   height: 100%;
-  grid-row: 1 / span 3; /* Spans across 3 grid rows: title, content, and author */
+  grid-row: 1 / span 4;
   object-fit: contain;
+}
+
+.post-author {
+  grid-row: 4;
 }
 
 .post-author img {
   width: 40px;
   height: 40px;
-  border-radius: 50%; /* Circle avatar */
+  border-radius: 50%;
   background-color: #ffbd00;
 }
 

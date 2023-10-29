@@ -33,10 +33,10 @@
                 <li><a href="#">Careers</a></li>
             </ul>
 
-            <input type="checkbox" id="theme-switcher">
+            <input type="checkbox" id="theme-switcher aria-label=" Toggle theme"">
             <label for="theme-switcher" class="label">
-                <img src="/assets/navbar/sun.png" alt="Sun icon" class="sun">
-                <img src="/assets/navbar/moon.png" alt="Moon icon" class="moon">
+                <img src="/assets/navbar/sun.png" alt="Light theme icon" class="sun">
+                <img src="/assets/navbar/moon.png" alt="Dark theme icon" class="moon">
             </label>
 
             <div class="search-icon">
@@ -57,99 +57,161 @@
     <section id="blog-section">
         <h1 class="blog-section-title">Latest Posts</h1>
         <div class="latest-posts">
-            <a href="#" class=" post-item">
-                <img class="post-image" src="/assets/blog-images/migrating-to-github-actions-for-rails-ci.png"
-                    alt="Github Actions Logo">
-                <h2>Migrating to Github Actions for Rails CI</h2>
-                <p>RubyCI is tragically shutting down, so I'm migrating to Github Actions for Rails CI</p>
-                <div class="post-author">
-                    <img src="/assets/author-images/phil.svg" alt="Author: Phil Reynolds">
-                    <span>Phil</span>
-                    <span>October 13, 2022</span>
-                </div>
-            </a>
-            <a href="#" class=" post-item"> <img class="post-image" src="/assets/blog-images/engineering-principles.png"
-                    alt="Ryalto logo with the title 'engineering Principles">
-                <h2>Our engineering principles</h2>
-                <p>The principles that we follow as we build high quality software at Ryalto</p>
-                <div class="post-author">
-                    <img src="/assets/author-images/phil.svg" alt="Author: Phil Reynolds">
-                    <span>Phil</span>
-                    <span>September 08, 2022</span>
-                </div>
-            </a>
-            <a href="#" class=" post-item"> <img class="post-image"
-                    src="/assets/blog-images/getting-into-ruby-on-rails.png"
-                    alt="A title with 'Getting into Ruby on Rails'">
-                <h2>Getting into Ruby on Rails</h2>
-                <p>A friend recently asked me how to get started with Ruby on Rails. I thought I'd write up a
-                    response here.</p>
-                <div class="post-author">
-                    <img src="/assets/author-images/phil.svg" alt="Author: Phil Reynolds">
-                    <span>Phil</span>
-                    <span>August 18, 2022</span>
-                </div>
-            </a>
-            <a href="#" class=" post-item"> <img class="post-image"
-                    src="/assets/blog-images/hotwire-handbook-part-2.png"
-                    alt="Rails 7 logo with Hotwire Logo and the title 'Part 2'">
-                <h2>Hotwire Handbook Part 2</h2>
-                <p>Part two of the Hotwire Handbook. A detailed dive into pagination with Hotwire. An extension to
-                    the
-                    excellent guide by David Colby.</p>
-                <div class="post-author">
-                    <img class="post-image" src="/assets/author-images/phil.svg" alt="Author: Phil Reynolds">
-                    <span>Phil</span>
-                    <span>June 27, 2022</span>
-                </div>
-            </a>
-            <a href="#" class=" post-item"> <img class="post-image" src="/assets/blog-images/upgrade-or-rebuild.png"
-                    alt="Two buttons showing upgrade or rebuild with a person undecided on which button to press">
-                <h2>Upgrade or Rebuild</h2>
-                <p>It's a question that many developers face. Maintenance takes a back seat to "urgent" new features
-                    and
-                    before you know it dependencies are out of date</p>
-                <div class="post-author">
-                    <img src="/assets/author-images/phil.svg" alt="Author: Phil Reynolds">
-                    <span>Phil</span>
-                    <span>June 25, 2022</span>
-                </div>
-            </a>
-            <a href="#" class=" post-item"> <img class="post-image"
-                    src="/assets/blog-images/admin-authorisation-at-ryalto.png" alt="Open padlock">
-                <h2>Admin Authorisation at Ryalto</h2>
-                <p>We're working on a better way to manage the relationship between users and organisations. This
-                    post
-                    is about our simple approach to admin users.</p>
-                <div class="post-author">
-                    <img src="/assets/author-images/phil.svg" alt="Author: Phil Reynolds">
-                    <span>Phil</span>
-                    <span>June 14th, 2022</span>
-                </div>
-            </a>
-            <a href="#" class=" post-item"> <img class="post-image"
-                    src="/assets/blog-images/hotwire-handbook-part-1.png"
-                    alt="Rails 7 logo with Hotwire Logo and the title 'Part 1'">
-                <h2>Hotwire Handbook Part 1</h2>
-                <p>A guide that covers a range of Hotwire use cases with examples. This part covers Toggle buttons,
-                    Content updates and Live counters</p>
-                <div class="post-author">
-                    <img src="/assets/author-images/phil.svg" alt="Author: Phil Reynolds">
-                    <span>Phil</span>
-                    <span>March 22, 2022</span>
-                </div>
-            </a>
-            <a href="#" class=" post-item"> <img class="post-image" src="/assets/blog-images/simple-js-toggle.png"
-                    alt="JavaScript logo and a toggle icon">
-                <h2>Simple Javascript Theme Toggle</h2>
-                <p>A guide on setting up a theme toggle using plain Javascript</p>
-                <div class="post-author">
-                    <img src="/assets/author-images/koto.svg" alt="Author: Koto Uchida">
-                    <span>Koto</span>
-                    <span>May 20, 2021</span>
-                </div>
-            </a>
+
+            <article>
+                <a href="#">
+                    <figure class="post-item">
+                        <img class="post-image" src="/assets/blog-images/migrating-to-github-actions-for-rails-ci.png"
+                            alt="Github Actions Logo">
+                        <figcaption>
+                            <h2>Migrating to Github Actions for Rails CI</h2>
+                            <p>RubyCI is tragically shutting down, so I'm migrating to Github Actions for Rails CI</p>
+                        </figcaption>
+                        <div class="post-author">
+                            <img src="/assets/author-images/phil.svg" alt="Author: Phil Reynolds">
+                            <span>Phil</span>
+                            <time datetime="2022-10-13">October 13, 2022</time>
+                        </div>
+                    </figure>
+                </a>
+            </article>
+
+            <article>
+                <a href="#">
+                    <figure class="post-item">
+                        <img class="post-image" src="/assets/blog-images/engineering-principles.png"
+                            alt="Github Actions Logo">
+                        <figcaption>
+                            <h2>Our engineering principles</h2>
+                            <p>The principles that we follow as we build high quality software at Ryalto
+                            </p>
+                        </figcaption>
+                        <div class="post-author">
+                            <img src="/assets/author-images/phil.svg" alt="Author: Phil Reynolds">
+                            <span>Phil</span>
+                            <time datetime="2022-10-13">September 08, 2022</time>
+                        </div>
+                    </figure>
+                </a>
+            </article>
+
+            <article>
+                <a href="#">
+                    <figure class="post-item">
+                        <img class="post-image" src="/assets/blog-images/getting-into-ruby-on-rails.png"
+                            alt="A title with 'Getting into Ruby on Rails'">
+                        <figcaption>
+                            <h2>Getting into Ruby on Rails</h2>
+                            <p>A friend recently asked me how to get started with Ruby on Rails. I thought I'd write up
+                                a response here.</p>
+                        </figcaption>
+                        <div class="post-author">
+                            <img src="/assets/author-images/phil.svg" alt="Author: Phil Reynolds">
+                            <span>Phil</span>
+                            <span>August 18, 2022</span>
+                        </div>
+                    </figure>
+                </a>
+            </article>
+
+            <article>
+                <a href="#">
+                    <figure class="post-item">
+                        <img class="post-image" src="/assets/blog-images/hotwire-handbook-part-2.png"
+                            alt="Rails 7 logo with Hotwire Logo and the title 'Part 2'">
+                        <figcaption>
+                            <h2>Hotwire Handbook Part 2</h2>
+                            <p>Part two of the Hotwire Handbook. A detailed dive into pagination with Hotwire. An
+                                extension to the excellent guide by David Colby.</p>
+                        </figcaption>
+                        <div class="post-author">
+                            <img class="post-image" src="/assets/author-images/phil.svg" alt="Author: Phil Reynolds">
+                            <span>Phil</span>
+                            <span>June 27, 2022</span>
+                        </div>
+                    </figure>
+                </a>
+            </article>
+
+            <article>
+                <a href="#">
+                    <figure class="post-item">
+                        <img class="post-image" src="/assets/blog-images/upgrade-or-rebuild.png"
+                            alt="Two buttons showing upgrade or rebuild with a person undecided on which button to press">
+                        <figcaption>
+                            <h2>Upgrade or Rebuild</h2>
+                            <p>It's a question that many developers face. Maintenance takes a back seat to "urgent" new
+                                features and before you know it dependencies are out of date</p>
+                        </figcaption>
+                        <div class="post-author">
+                            <img src="/assets/author-images/phil.svg" alt="Author: Phil Reynolds">
+                            <span>Phil</span>
+                            <span>June 25, 2022</span>
+                        </div>
+                    </figure>
+                </a>
+            </article>
+
+            <article>
+                <a href="#">
+                    <figure class="post-item">
+                        <img class="post-image" src="/assets/blog-images/admin-authorisation-at-ryalto.png"
+                            alt="Open padlock">
+                        <figcaption>
+                            <h2>Admin Authorisation at Ryalto</h2>
+                            <p>We're working on a better way to manage the relationship between users and organisations.
+                                This post is about our simple approach to admin users.</p>
+                        </figcaption>
+                        <div class="post-author">
+                            <img src="/assets/author-images/phil.svg" alt="Author: Phil Reynolds">
+                            <span>Phil</span>
+                            <span>June 14th, 2022</span>
+                        </div>
+                    </figure>
+                </a>
+            </article>
+
+            <!-- Sixth Post Item -->
+            <article>
+                <a href="#">
+                    <figure class="post-item">
+                        <img class="post-image" src="/assets/blog-images/hotwire-handbook-part-1.png"
+                            alt="Rails 7 logo with Hotwire Logo and the title 'Part 1'">
+                        <figcaption>
+                            <h2>Hotwire Handbook Part 1</h2>
+                            <p>A guide that covers a range of Hotwire use cases with examples. This part covers Toggle
+                                buttons, Content updates and Live counters</p>
+                        </figcaption>
+                        <div class="post-author">
+                            <img src="/assets/author-images/phil.svg" alt="Author: Phil Reynolds">
+                            <span>Phil</span>
+                            <span>March 22, 2022</span>
+                        </div>
+                    </figure>
+                </a>
+            </article>
+
+            <article>
+                <a href="#">
+                    <figure class="post-item">
+                        <img class="post-image" src="/assets/blog-images/simple-js-toggle.png"
+                            alt="JavaScript logo and a toggle icon">
+                        <figcaption>
+                            <h2>Simple Javascript Theme Toggle</h2>
+                            <p>A guide on setting up a theme toggle using plain Javascript</p>
+                        </figcaption>
+                        <div class="post-author">
+                            <img src="/assets/author-images/koto.svg" alt="Author: Koto Uchida">
+                            <span>Koto</span>
+                            <span>May 20, 2021</span>
+                        </div>
+                    </figure>
+                </a>
+            </article>
+
         </div>
+
+
 
     </section>
 
