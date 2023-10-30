@@ -1,4 +1,8 @@
 /* Global STYLES____ */
+:root {
+  --ryalto-blue: #2f98e8;
+  --ryalto-yellow: #ffbd00;
+}
 
 * {
   margin: 0;
@@ -14,7 +18,7 @@ body {
 /* ____NAVBAR STYLES____ */
 
 nav {
-  background-color: #2f98e8;
+  background-color: var(--ryalto-blue);
   display: flex;
   justify-content: space-between;
   padding: 25px 20px;
@@ -56,7 +60,7 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
-  color: #ffbd00;
+  color: var(--ryalto-yellow);
 }
 
 .nav-title {
@@ -112,7 +116,7 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   height: 50vh;
-  background-color: #2f98e8;
+  background-color: var(--ryalto-blue);
 }
 
 .hero h1 {
@@ -122,7 +126,7 @@ nav a:hover {
   text-align: center;
 }
 .hero-title-blue {
-  color: #ffbd00;
+  color: var(--ryalto-yellow);
 }
 
 .hero p {
@@ -136,7 +140,7 @@ nav a:hover {
   display: inline-block;
   padding: 10px 20px;
   color: white;
-  background-color: #ffbd00;
+  background-color: var(--ryalto-yellow);
   border-radius: 5%;
   text-decoration: none;
   transition: background-color 0.3s;
@@ -146,16 +150,8 @@ nav a:hover {
 .hero-btn:hover {
   background-color: white;
   text-decoration: underline;
-  text-decoration-color: #ffbd00;
-  color: #ffbd00;
-}
-
-hr {
-  border: none;
-  height: 1px;
-  width: 50%;
-  background-color: #0099ff;
-  margin: 0 auto;
+  text-decoration-color: var(--ryalto-yellow);
+  color: var(--ryalto-yellow);
 }
 
 /* ___BLOG POST SECTION STYLES___ */
@@ -223,7 +219,7 @@ figcaption h2 {
 
 /* ___Footer SECTION STYLES___ */
 footer {
-  background-color: #0099ff;
+  background-color: var(--ryalto-blue);
   padding: 20px 0;
   color: white;
   height: 150px;
@@ -247,6 +243,11 @@ footer {
 }
 .company-section {
   margin-right: 0;
+  font-style: normal;
+}
+
+.company-section ul {
+  list-style: none;
 }
 
 .logo-section img {
